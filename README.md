@@ -21,7 +21,6 @@ I got asked this question enough times that it made more sense to write it down 
 - [Decision Guide](#decision-guide)
 - [References](#references)
 
----
 
 ## Philosophy
 
@@ -33,7 +32,6 @@ The reason these two tools feel so different to use is that they were built on c
 
 That difference in design philosophy explains most of the tradeoffs below.
 
----
 
 ## Advantages of Nextflow
 
@@ -53,7 +51,6 @@ Hash-based caching means Nextflow checks the task inputs *and* the script before
 
 The current Nextflow syntax lets you write proper modules with explicit input/output interfaces and import them across pipelines. For teams maintaining multiple workflows, this is genuinely useful — you write a STAR alignment module once and share it everywhere.
 
----
 
 ## Advantages of Snakemake
 
@@ -85,7 +82,6 @@ snakemake --report report.html
 
 Self-contained HTML with the DAG, rule runtimes, and configurable result figures. No external service, no configuration.
 
----
 
 ## Limitations of Nextflow
 
@@ -105,7 +101,6 @@ When a task fails, you get a work directory path with a hash. At scale there are
 
 Nextflow's development is driven largely by Seqera Labs, a VC-backed company. The core is Apache 2.0 licensed so the risk isn't existential, but it's worth being aware of for long-term infrastructure decisions.
 
----
 
 ## Limitations of Snakemake
 
@@ -129,7 +124,6 @@ If a rule produces a variable number of output files — say, a clustering step 
 
 The v7→v8 migration changed the executor API significantly. If you're setting up a pipeline you expect to maintain for several years, factor in that Snakemake major versions have historically required real migration work.
 
----
 
 ## How a Pipeline Looks in Each Framework
 
@@ -177,7 +171,6 @@ flowchart RL
 
 Snakemake reads this right-to-left — it asks *"what do I need to produce the target?"* and works backwards. The parallelism is implicit in the DAG structure.
 
----
 
 ## Quick Comparison
 
@@ -198,7 +191,6 @@ Snakemake reads this right-to-left — it asks *"what do I need to produce the t
 | Singularity | First-class | First-class |
 | Backing | Seqera Labs (commercial) | Academic / open source |
 
----
 
 ## Decision Guide
 
@@ -235,7 +227,6 @@ flowchart TD
 
 Both tools have been in active development for over a decade. Make the choice based on your team and infrastructure today — not on speculation about which project survives longer.
 
----
 
 ## References
 
@@ -248,6 +239,6 @@ Both tools have been in active development for over a decade. Make the choice ba
 7. nf-core: https://nf-co.re
 8. Snakemake Wrappers: https://snakemake-wrappers.readthedocs.io
 
----
 
 *Covers Nextflow 24.x and Snakemake 8.x — flag an issue if something has changed.*
+
