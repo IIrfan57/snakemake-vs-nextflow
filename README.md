@@ -240,7 +240,7 @@ Both tools have been in active development for over a decade. Make the choice ba
 8. Snakemake Wrappers: https://snakemake-wrappers.readthedocs.io
 
 
-*Covers Nextflow 24.x and Snakemake 8.x — flag an issue if something has changed.*
+*Tested against Nextflow 24.x and Snakemake 8.x. Both tools move fast, what's true today might be outdated in six months. If something here is wrong or no longer accurate, open an issue and I'll fix it*
 
 
 
