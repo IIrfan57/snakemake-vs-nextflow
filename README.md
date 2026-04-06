@@ -37,9 +37,9 @@ That difference in design philosophy explains most of the tradeoffs below.
 
 ### nf-core is genuinely exceptional
 
-It's hard to overstate how useful [nf-core](https://nf-co.re) is. Over 100 peer-reviewed, CI-tested pipelines covering RNA-seq, variant calling, single-cell, methylation, metagenomics — most with Singularity support and consistent parameter schemas. If there's an nf-core pipeline for your use case, you should probably just use it rather than building from scratch. Even if you're writing a custom pipeline, the nf-core modules library has hundreds of tool wrappers you can import directly, which saves a lot of boilerplate.
+It's hard to overstate how useful [nf-core](https://nf-co.re) is. Over 100 community-reviewed, CI-tested pipelines covering RNA-seq, variant calling, single-cell, methylation, metagenomics — most with Singularity support and consistent parameter schemas. If there's an nf-core pipeline for your use case, you should probably just use it rather than building from scratch. Even if you're writing a custom pipeline, the nf-core modules library has hundreds of tool wrappers you can import directly, which saves a lot of boilerplate.
 
-### Cloud scaling is first-class
+### Cloud scaling is built in
 
 Switching from SLURM to AWS Batch is a config change, not a rewrite. Nextflow's executor model was designed for distributed compute from the start — it treats a local workstation, an HPC cluster, and a cloud batch system as interchangeable backends. If you ever need to burst beyond your on-premise cluster, Nextflow makes that much less painful than the alternative.
 
@@ -179,10 +179,10 @@ Snakemake reads this right-to-left — it asks *"what do I need to produce the t
 | Language | Groovy + Bash | Python |
 | Mental model | Data flows through channels | Rules produce files from files |
 | Learning curve | Steep — channels take time | Gentle for Python users |
-| Community pipelines | nf-core (~100+ end-to-end) | Snakemake Wrappers (~400 tools) |
+| Community pipelines | nf-core (~100+ end-to-end) | Snakemake Wrappers (~1,000+ tools) |
 | Cloud support | Excellent, native | Good, more configuration |
 | HPC schedulers | SLURM, SGE, LSF, PBS | SLURM, SGE, LSF, PBS |
-| Resumability | Hash-based (robust) | Timestamp + hash |
+| Resumability | Hash-based (robust) | Timestamp-based by default |
 | Per-rule benchmarking | Execution trace (needs config) | Native `benchmark:` directive |
 | Built-in report | Execution timeline/trace | HTML report, native |
 | Driver memory | 6–8 GB (JVM) | ~150 MB (Python) |
@@ -241,4 +241,6 @@ Both tools have been in active development for over a decade. Make the choice ba
 
 
 *Covers Nextflow 24.x and Snakemake 8.x — flag an issue if something has changed.*
+
+
 
