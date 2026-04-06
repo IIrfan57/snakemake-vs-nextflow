@@ -5,7 +5,7 @@
 ![Nextflow](https://img.shields.io/badge/Nextflow-24.x-brightgreen)
 ![Snakemake](https://img.shields.io/badge/Snakemake-8.x-orange)
 
-A reference for bioinformaticians trying to make an informed choice. Not a verdict — both tools are good, and anyone telling you otherwise probably hasn't used both seriously.
+I got asked this question enough times that it made more sense to write it down once.
 
 ---
 
