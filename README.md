@@ -187,8 +187,8 @@ Snakemake reads this right-to-left — it asks *"what do I need to produce the t
 | Built-in report | Execution timeline/trace | HTML report, native |
 | Driver memory | 6–8 GB (JVM) | ~150 MB (Python) |
 | Dynamic outputs | Natural via channels | Checkpoint rules |
-| Conda integration | Supported | First-class |
-| Singularity | First-class | First-class |
+| Conda integration | Supported | Native |
+| Singularity | Native | Native |
 | Backing | Seqera Labs (commercial) | Academic / open source |
 
 
